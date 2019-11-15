@@ -1,24 +1,11 @@
 package com.trello.qa.manager;
 
-import com.google.common.io.Files;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
   AppiumDriver driver;
@@ -30,13 +17,13 @@ public class ApplicationManager {
   public void init() throws MalformedURLException, InterruptedException {
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("platformName", "Android");
-    capabilities.setCapability("deviceName", "qa21");
+    capabilities.setCapability("deviceName", "Nexus_6");
     capabilities.setCapability( "platformVersion", "8.0");
     capabilities.setCapability("automationName", "Appium");
     capabilities.setCapability( "appPackage", "com.trello");
     capabilities.setCapability("appActivity",".home.HomeActivity");
     capabilities.setCapability("app",
-            "C:/Users/Elena/Dropbox/Tel-ran/Mobile/apk/Trello_new.apk");
+            "C:/Tools/Trello_new.apk");
 
     driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
@@ -47,7 +34,7 @@ public class ApplicationManager {
     userHelper = new UserHelper(driver);
 
 
-    sessionHelper.login("elena.telran@yahoo.com", "12345.com");
+    sessionHelper.login("zvs2010@gmail.com", "23666632");
 
   }
 

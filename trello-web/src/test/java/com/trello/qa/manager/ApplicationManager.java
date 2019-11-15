@@ -5,9 +5,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
@@ -15,7 +13,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.Driver;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
@@ -75,7 +72,7 @@ public class ApplicationManager {
     userHelper = new UserHelper(driver);
 
     sessionHelper.openSite("https://trello.com");
-    sessionHelper.login("elena.telran@yahoo.com", "12345.com");
+    sessionHelper.login("zvs2010@gmail.com", "23666632");
   }
 
   public void stop() {
